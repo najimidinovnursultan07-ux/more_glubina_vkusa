@@ -37,7 +37,7 @@
         }
         
         .glass-panel {
-            background: rgba(6, 20, 36, 0.8);
+            background: rgba(6, 20, 36, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(0, 242, 254, 0.3);
@@ -114,7 +114,6 @@
             z-index: 1;
         }
 
-        /* Responsive Fixes */
         @media (max-width: 640px) {
             .container-px {
                 padding-left: 1rem;
@@ -129,10 +128,24 @@
 
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-cyan-500/30">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+        <!-- Жогорку кичинекей маалымат тилкеси (Телефон жана График) -->
+        <div class="border-b border-cyan-500/20 bg-oceanBlue/60 py-1 px-3 sm:px-6 lg:px-8 text-[11px] sm:text-xs">
+            <div class="max-w-7xl mx-auto flex justify-between items-center text-cyan-200">
+                <a href="tel:+996507578578" class="flex items-center space-x-1.5 hover:text-cyan-400 transition font-bold">
+                    <i class="fa-solid fa-phone text-cyan-400"></i>
+                    <span>+996 507 578 578</span>
+                </a>
+                <div class="flex items-center space-x-1.5 text-gray-300">
+                    <i class="fa-solid fa-clock text-cyan-400"></i>
+                    <span data-i18n="topBarSchedule">График работы: с 9:00 до 3:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Негизги Меню -->
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-2 sm:space-x-3 group min-w-0">
-                <!-- ЛОГОТИП КОШТУЛДУ -->
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-white/10 flex items-center justify-center neon-box shrink-0 border border-cyan-400/50">
+                <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white/10 flex items-center justify-center neon-box shrink-0 border border-cyan-400/50">
                     <img src="logo.png" alt="Море — Глубина вкуса Logo" class="w-full h-full object-cover">
                 </div>
                 <div class="min-w-0">
@@ -149,7 +162,7 @@
                 <a href="#footer" class="hover:text-cyan-400 transition" data-i18n="navContact">Контакты</a>
 
                 <!-- Lang Switcher Desktop -->
-                <select id="langSelect" onchange="changeLanguage(this.value)" class="glass-panel text-cyan-300 px-2.5 py-1.5 rounded-lg text-xs font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
+                <select id="langSelect" onchange="changeLanguage(this.value)" class="glass-panel text-cyan-300 px-2 py-1 rounded-lg text-xs font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
                     <option value="kg" class="bg-oceanDark">KG</option>
                     <option value="ru" class="bg-oceanDark">RU</option>
                     <option value="en" class="bg-oceanDark">EN</option>
@@ -158,7 +171,7 @@
 
             <div class="flex items-center space-x-2 shrink-0">
                 <!-- Lang Switcher Mobile -->
-                <select id="langSelectMob" onchange="changeLanguage(this.value)" class="lg:hidden glass-panel text-cyan-300 px-1.5 py-1.5 rounded-lg text-[11px] font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
+                <select id="langSelectMob" onchange="changeLanguage(this.value)" class="lg:hidden glass-panel text-cyan-300 px-1.5 py-1 rounded-lg text-[11px] font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
                     <option value="kg" class="bg-oceanDark">KG</option>
                     <option value="ru" class="bg-oceanDark">RU</option>
                     <option value="en" class="bg-oceanDark">EN</option>
@@ -174,7 +187,7 @@
     </header>
 
     <!-- MAIN SECTION -->
-    <section id="main" class="relative pt-28 sm:pt-36 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center overflow-hidden">
+    <section id="main" class="relative pt-36 sm:pt-40 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center overflow-hidden">
        <div class="main-slideshow">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
                 <source src="https://www.image2url.com/r2/default/videos/1790355056218-c4dd403b-6f60-4dc9-ad4a-b34fe341f4f9.mp4" type="video/mp4">
@@ -379,6 +392,7 @@
             kg: {
                 brandTitle: "МОРЕ — ГЛУБИНА ВКУСА",
                 brandSubtitle: "МОРЕ ПРОДУКТЫ",
+                topBarSchedule: "Иштөө графиги: 9:00дөн 3:00гө чейин",
                 navMain: "Башкы бет",
                 navCat: "Категориялар",
                 navMenu: "Меню",
@@ -430,6 +444,7 @@
             ru: {
                 brandTitle: "МОРЕ — ГЛУБИНА ВКУСА",
                 brandSubtitle: "МОРЕПРОДУКТЫ",
+                topBarSchedule: "График работы: с 9:00 до 3:00",
                 navMain: "Главная",
                 navCat: "Категории",
                 navMenu: "Меню",
@@ -481,6 +496,7 @@
             en: {
                 brandTitle: "SEA — DEPTH OF TASTE",
                 brandSubtitle: "SEAFOOD",
+                topBarSchedule: "Working hours: from 9:00 to 3:00",
                 navMain: "Home",
                 navCat: "Categories",
                 navMenu: "Menu",
