@@ -128,7 +128,6 @@
 
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-cyan-500/30">
-        <!-- Жогорку кичинекей маалымат тилкеси (Телефон жана График) -->
         <div class="border-b border-cyan-500/20 bg-oceanBlue/60 py-1 px-3 sm:px-6 lg:px-8 text-[11px] sm:text-xs">
             <div class="max-w-7xl mx-auto flex justify-between items-center text-cyan-200">
                 <a href="tel:+996507578578" class="flex items-center space-x-1.5 hover:text-cyan-400 transition font-bold">
@@ -142,7 +141,6 @@
             </div>
         </div>
 
-        <!-- Негизги Меню -->
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-2 sm:space-x-3 group min-w-0">
                 <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white/10 flex items-center justify-center neon-box shrink-0 border border-cyan-400/50">
@@ -161,7 +159,6 @@
                 <a href="#fun" class="hover:text-cyan-400 transition" data-i18n="navMood">Атмосфера</a>
                 <a href="#footer" class="hover:text-cyan-400 transition" data-i18n="navContact">Контакты</a>
 
-                <!-- Lang Switcher Desktop -->
                 <select id="langSelect" onchange="changeLanguage(this.value)" class="glass-panel text-cyan-300 px-2 py-1 rounded-lg text-xs font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
                     <option value="kg" class="bg-oceanDark">KG</option>
                     <option value="ru" class="bg-oceanDark">RU</option>
@@ -170,7 +167,6 @@
             </nav>
 
             <div class="flex items-center space-x-2 shrink-0">
-                <!-- Lang Switcher Mobile -->
                 <select id="langSelectMob" onchange="changeLanguage(this.value)" class="lg:hidden glass-panel text-cyan-300 px-1.5 py-1 rounded-lg text-[11px] font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
                     <option value="kg" class="bg-oceanDark">KG</option>
                     <option value="ru" class="bg-oceanDark">RU</option>
@@ -235,7 +231,7 @@
             <p class="text-gray-300 text-xs sm:text-base mt-2" data-i18n="catMainDesc">Выберите любимые морепродукты по категориям</p>
         </div>
 
-        <div id="categoryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4"></div>
+        <div id="categoryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 sm:gap-4"></div>
     </section>
 
     <!-- PRODUCTS / MENU SECTION -->
@@ -272,11 +268,11 @@
                     </p>
                 </div>
                 <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                    <div class="overflow-hidden rounded-2xl glass-panel p-1 neon-box">
-                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=500&q=80" alt="Sea food" class="w-full h-28 sm:h-36 object-cover rounded-xl hover:scale-105 transition">
-                    </div>
-                    <div class="overflow-hidden rounded-2xl glass-panel p-1 neon-box">
-                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80" alt="Sushi" class="w-full h-28 sm:h-36 object-cover rounded-xl hover:scale-105 transition">
+                    <div class="col-span-2 overflow-hidden rounded-2xl glass-panel p-1 neon-box">
+                        <video autoplay muted loop playsinline preload="metadata" class="w-full aspect-video object-cover rounded-xl">
+                            <source src="atmasvera.mp4" type="video/mp4">
+                            Сиздин браузер видеону колдобойт.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -313,7 +309,7 @@
                 <div class="flex space-x-3 sm:space-x-4 mb-4">
                     <a href="https://t.me/" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i class="fa-brands fa-telegram"></i></a>
                     <a href="https://wa.me/996507578578" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://instagram.com/" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/more_glubina_vkusa?vrfl=dnJlcWduemVtc3Ft" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <a href="https://wa.me/996507578578?text=Салам!+Колдоо+керек" target="_blank" class="inline-flex items-center text-cyan-300 text-xs sm:text-sm font-semibold hover:underline">
                     <i class="fa-solid fa-headset mr-2"></i> <span data-i18n="whatsappSupport">WhatsApp Поддержка</span>
@@ -323,7 +319,7 @@
             <div>
                 <h4 class="text-white font-bold mb-3 sm:mb-4 border-l-4 border-cyan-400 pl-3 text-sm sm:text-base" data-i18n="footerAddressTitle">Адреса</h4>
                 <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
-                    <li><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> <span data-i18n="addressText">г. Бишкек, ул. Туголбай Ата, 32А</span></li>
+                    <li><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> <span data-i18n="addressText">г. Бишкек, ул. Туголбай Ата, 32</span></li>
                     <li><i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +996 (507) 578-578</li>
                     <li><i class="fa-solid fa-clock text-cyan-400 mr-2"></i> <span data-i18n="timeText">Ежедневно: 9:00 - 3:00</span></li>
                 </ul>
@@ -402,7 +398,7 @@
                 heroBadge: "Эң жаңы жана даамдуу премиум деңиз азыктары",
                 heroTitle1: "Деңиздин тереңдигинен",
                 heroTitle2: "сизге чейин!",
-                heroDesc: "Кереметтүү даамдар, жандуу балыктар, креветкалар, устрицалар жана башка деңиз деликатестери бир жерде. 3D чөйрөдөгү эң сонун табитти биз менен бирге сезиңиз.",
+                heroDesc: "Кереметтүү даамдар, жандуу балыктар, креветкалар, рактар ​​жана башка деңиз деликатестери бир жерде. 3D чөйрөдөгү эң сонун табитти биз менен бирге сезиңиз.",
                 heroBtnMenu: "Менюну көрүү",
                 heroBtnWa: "WhatsApp Суроо",
                 sliderSub: "Премиум деңиз азыктарынын жеткирүү кызматы",
@@ -421,7 +417,7 @@
                 footerLinksTitle: "Шилтемелер & Колдоо",
                 whatsappSupport: "WhatsApp Поддержка",
                 footerAddressTitle: "Даректер",
-                addressText: "Бишкек ш., Туголбай Ата, 32А",
+                addressText: "Бишкек ш., Туголбай Ата, 32",
                 timeText: "Ежедневно: 9:00 - 3:00",
                 copyright: "© 2026 Море — Глубина вкуса. Бардык укуктар корголгон.",
                 cartModalTitle: "Сенин Корзинаң",
@@ -438,6 +434,7 @@
                 totalSumText: "Жалпы сумма:",
                 whatsappBtn: "WhatsApp аркылуу заказ кылуу",
                 currency: "сом",
+                priceLabel: "Баасы",
                 allCatName: "Баары",
                 addToCartBtn: "Кошууга"
             },
@@ -454,7 +451,7 @@
                 heroBadge: "Самые свежие и вкусные премиум морепродукты",
                 heroTitle1: "Из глубин моря",
                 heroTitle2: "прямо к вам!",
-                heroDesc: "Великолепные вкусы, живая рыба, креветки, устрицы и другие деликатесы в одном месте. Почувствуйте настоящий вкус в 3D пространстве.",
+                heroDesc: "Великолепные вкусы, живая рыба, креветки, раки и другие деликатесы в одном месте. Почувствуйте настоящий вкус в 3D пространстве.",
                 heroBtnMenu: "Смотреть меню",
                 heroBtnWa: "WhatsApp Вопрос",
                 sliderSub: "Служба доставки премиальных морепродуктов",
@@ -473,7 +470,7 @@
                 footerLinksTitle: "Ссылки и Поддержка",
                 whatsappSupport: "WhatsApp Поддержка",
                 footerAddressTitle: "Адреса",
-                addressText: "г. Бишкек, ул. Туголбай Ата, 32А",
+                addressText: "г. Бишкек, ул. Туголбай Ата, 32",
                 timeText: "Ежедневно: 9:00 - 3:00",
                 copyright: "© 2026 Море — Глубина вкуса. Все права защищены.",
                 cartModalTitle: "Ваша Корзина",
@@ -490,6 +487,7 @@
                 totalSumText: "Итого:",
                 whatsappBtn: "Заказать через WhatsApp",
                 currency: "сом",
+                priceLabel: "Баасы",
                 allCatName: "Все",
                 addToCartBtn: "В корзину"
             },
@@ -506,7 +504,7 @@
                 heroBadge: "The freshest and most delicious premium seafood",
                 heroTitle1: "From the deep sea",
                 heroTitle2: "right to you!",
-                heroDesc: "Exquisite flavors, fresh fish, shrimp, oysters and other delicacies in one place. Experience the ultimate taste in a 3D environment.",
+                heroDesc: "Exquisite flavors, fresh fish, shrimp, crayfish and other delicacies in one place. Experience the ultimate taste in a 3D environment.",
                 heroBtnMenu: "View Menu",
                 heroBtnWa: "WhatsApp Inquiry",
                 sliderSub: "Premium seafood delivery service",
@@ -525,7 +523,7 @@
                 footerLinksTitle: "Links & Support",
                 whatsappSupport: "WhatsApp Support",
                 footerAddressTitle: "Addresses",
-                addressText: "Bishkek city, Tugolbai Ata st., 32A",
+                addressText: "Bishkek city, Tugolbai Ata st., 32",
                 timeText: "Every day: 9:00 - 3:00",
                 copyright: "© 2026 Sea — Depth of Taste. All rights reserved.",
                 cartModalTitle: "Your Cart",
@@ -542,6 +540,7 @@
                 totalSumText: "Total:",
                 whatsappBtn: "Order via WhatsApp",
                 currency: "som",
+                priceLabel: "Price",
                 allCatName: "All",
                 addToCartBtn: "Add to Cart"
             }
@@ -601,229 +600,231 @@
         setInterval(nextBgSlide, 4500);
 
         const categories = [
-            { id: 1, name: { kg: "Креветкалар", ru: "Креветки", en: "Shrimps" }, icon: "fa-shrimp" },
-            { id: 2, name: { kg: "Балыктар", ru: "Рыба", en: "Fish" }, icon: "fa-fish" },
-            { id: 3, name: { kg: "Устрицалар", ru: "Устрицы", en: "Oysters" }, icon: "fa-otter" },
-            { id: 4, name: { kg: "Суши & Сеттер", ru: "Суши и Сеты", en: "Sushi & Sets" }, icon: "fa-utensils" },
-            { id: 5, name: { kg: "Лобстерлер", ru: "Лобстеры", en: "Lobsters" }, icon: "fa-bugs" },
-            { id: 6, name: { kg: "Суусундуктар", ru: "Напитки", en: "Drinks" }, icon: "fa-wine-glass" }
+            { id: 1, name: { kg: "Салаттар", ru: "Салаты", en: "Salads" }, icon: "fa-bowl-food" },
+            { id: 2, name: { kg: "Суптар", ru: "Супы", en: "Soups" }, icon: "fa-bowl-rice" },
+            { id: 3, name: { kg: "Ысык тамактар", ru: "Горячее", en: "Hot Dishes" }, icon: "fa-fish" },
+            { id: 4, name: { kg: "Рактар жана Закускалар", ru: "Раки и Закуски", en: "Crayfish & Snacks" }, icon: "fa-bugs" },
+            { id: 5, name: { kg: "Гарнирлер", ru: "Гарниры", en: "Side Dishes" }, icon: "fa-bowl-rice" },
+            { id: 6, name: { kg: "Соустар", ru: "Соусы", en: "Sauces" }, icon: "fa-jar" },
+            { id: 7, name: { kg: "Суусундуктар", ru: "Напитки", en: "Drinks" }, icon: "fa-wine-glass" }
         ];
 
         const products = [
+            // Салаты (catId: 1)
             { 
                 id: 101, catId: 1, 
-                name: { kg: "Тигровые креветки на гриле", ru: "Тигровые креветки на гриле", en: "Grilled Tiger Shrimps" }, 
-                price: 765, oldPrice: 850, discount: "10%", 
-                image: "https://images.unsplash.com/photo-1565680314440-c2d2e1c9e836?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Жыпар жыттуу соус менен бышырылган тигр креветкалары.", ru: "Тигровые креветки, приготовленные с ароматным соусом.", en: "Tiger shrimp cooked with flavorful sauce." } 
+                name: { kg: "Деңиз водоросли салаты", ru: "Салат из морских водорослей", en: "Seaweed Salad" }, 
+                price: 420, 
+                image: "салатизводорос.jpeg", 
+                desc: { kg: "Кунжут майы, сарымсак жана лимон кошулган даамдуу водоросли.", ru: "Нежные морские водоросли в ароматной заправке из кунжутного масла, чеснока и лимона.", en: "Delicate seaweed in aromatic dressing." } 
             },
             { 
                 id: 102, catId: 1, 
-                name: { kg: "Королевские креветки в кляре", ru: "Королевские креветки в кляре", en: "King Prawns in Batter" }, 
-                price: 780, 
-                image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Кытырак клярдагы даамдуу королдук креветкалар.", ru: "Вкусные королевские креветки в хрустящем кляре.", en: "Delicious king prawns in crispy batter." } 
+                name: { kg: "Деңиз азыктары салаты", ru: "Салат с морепродуктами", en: "Seafood Salad" }, 
+                price: 990, 
+                image: "салатизморе.jpeg", 
+                desc: { kg: "Мидия, кальмар, креветка жана секелектер пармезан сыры менен.", ru: "Сочетание мидий, кальмаров, креветок и осьминогов в фирменном соусе с сыром Пармезан.", en: "Mussels, squid, shrimp, octopus with parmesan." } 
             },
             { 
                 id: 103, catId: 1, 
-                name: { kg: "Чесночные креветки по-неаполитански", ru: "Чесночные креветки по-неаполитански", en: "Neapolitan Garlic Shrimps" }, 
-                price: 920, 
-                image: "https://images.unsplash.com/photo-1559741072-490bb7af55f6?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Сарымсак майына куурулган назик креветкалар.", ru: "Нежные креветки, обжаренные в чесночном масле.", en: "Delicate shrimp fried in garlic butter." } 
-            },
-            { 
-                id: 104, catId: 1, 
-                name: { kg: "Острые креветки Спайси", ru: "Острые креветки Спайси", en: "Spicy Shrimps" }, 
-                price: 800, 
-                image: "https://images.unsplash.com/photo-1565680314440-c2d2e1c9e836?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Ачуу спайси соусу кошулган деликатес.", ru: "Деликатес с добавлением острого соуса спайси.", en: "Delicacy with added spicy sauce." } 
-            },
-            { 
-                id: 105, catId: 1, 
-                name: { kg: "Креветки в сливочном соусе", ru: "Креветки в сливочном соусе", en: "Shrimps in Creamy Sauce" }, 
-                price: 890, 
-                image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Каймак майлуу соустагы креветкалар.", ru: "Креветки в нежном сливочном соусе.", en: "Shrimp in tender creamy sauce." } 
+                name: { kg: "Кимчи салаты", ru: "Кимчи салат", en: "Kimchi Salad" }, 
+                price: 590, 
+                image: "кимчисалат.jpeg", 
+                desc: { kg: "Ачуу калемпир, кинза жана соя соусу кошулган кимчи.", ru: "Пикантный салат из кимчи с острым перцем, кинзой и соевым соусом.", en: "Spicy kimchi salad with pepper and cilantro." } 
             },
 
+            // Супы (catId: 2)
             { 
                 id: 201, catId: 2, 
-                name: { kg: "Стейк из семги на углях", ru: "Стейк из семги на углях", en: "Grilled Salmon Steak" }, 
-                price: 1100, 
-                image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Көмүрдө бышырылган эң сонун семга стейги.", ru: "Великолепный стейк из семги, приготовленный на углях.", en: "Delicious charcoal-grilled salmon steak." } 
+                name: { kg: "Сыр кошулган рамен", ru: "Рамен с сыром", en: "Cheese Ramen" }, 
+                price: 440, 
+                image: "раменсыром.jpeg", 
+                desc: { kg: "Гауда жана Пармезан сырлары кошулган сливочный бульон.", ru: "Насыщенный сливочно-сырный бульон с сырами Гауда и Пармезан.", en: "Rich creamy cheese ramen." } 
             },
             { 
                 id: 202, catId: 2, 
-                name: { kg: "Дорадо запеченная с травами", ru: "Дорадо запеченная с травами", en: "Baked Dorado with Herbs" }, 
-                price: 950, 
-                image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Жыпар жыттуу чөптөр менен меште бышкан дорадо.", ru: "Дорадо, запеченная в духовке с ароматными травами.", en: "Dorado baked in the oven with aromatic herbs." } 
+                name: { kg: "Тоок эти кошулган рамен", ru: "Рамен с курицей", en: "Chicken Ramen" }, 
+                price: 420, 
+                image: "раменкурица.jpeg", 
+                desc: { kg: "Тоок филеси, жумуртка жана жашыл пияз кошулган рамен.", ru: "Ароматный рамен с нежным куриным филе, яйцом и зеленым луком.", en: "Fragrant ramen with chicken fillet and egg." } 
             },
             { 
                 id: 203, catId: 2, 
-                name: { kg: "Сибас в соли по-средиземноморски", ru: "Сибас в соли по-средиземноморски", en: "Mediterranean Salt-Baked Seabass" }, 
-                price: 990, 
-                image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Деңиз тузунун астында ширелүү бойдон бышкан сибас.", ru: "Сибас, запеченный сочным под морской солью.", en: "Seabass baked juicy under sea salt." } 
+                name: { kg: "Фирмалык деңиз азыктары рамени", ru: "Фирменный рамен с морепродуктами", en: "Signature Seafood Ramen" }, 
+                price: 860, 
+                image: "раменфир.jpeg", 
+                desc: { kg: "Деңиз азыктары жана чыгыш татымалдары кошулган сорпо.", ru: "Насыщенный бульон с морепродуктами и пряными восточными нотками.", en: "Rich broth with seafood and spices." } 
             },
             { 
                 id: 204, catId: 2, 
-                name: { kg: "Филе форели в сливочном шпинате", ru: "Филе форели в сливочном шпинате", en: "Trout Fillet in Creamy Spinach" }, 
-                price: 870, 
-                image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Шпинат жана каймак соусу менен форель филеси.", ru: "Филе форели со шпинатом и сливочным соусом.", en: "Trout fillet with spinach and creamy sauce." } 
+                name: { kg: "Деңиз азыктары супу", ru: "Суп из морепродуктов", en: "Seafood Soup" }, 
+                price: 800, 
+                image: "супмореп.jpeg", 
+                desc: { kg: "Балык, креветка, секелек жана кальмар кошулган сорпо.", ru: "Бульон с рыбой, креветками, осьминогами и кальмарами.", en: "Broth with fish, shrimp, octopus, and squid." } 
             },
             { 
                 id: 205, catId: 2, 
-                name: { kg: "Лосось на шпажках с овощами", ru: "Лосось на шпажках с овощами", en: "Salmon Skewers with Vegetables" }, 
-                price: 820, 
-                image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Жашылчалар менен коштолгон лосось шашлыгы.", ru: "Шашлык из лосося с овощами.", en: "Salmon shashlik accompanied by vegetables." } 
+                name: { kg: "Том Ям деңиз азыктары менен", ru: "Том Ям с морепродуктами", en: "Tom Yum with Seafood" }, 
+                price: 840, 
+                image: "томям.jpeg", 
+                desc: { kg: "Сливочно-кокосовый бульондогу ачуу тай супу.", ru: "Пряный тайский суп с морепродуктами в сливочно-кокосовом бульоне.", en: "Spicy Thai soup in creamy coconut broth." } 
             },
 
+            // Горячее (catId: 3)
             { 
                 id: 301, catId: 3, 
-                name: { kg: "Свежие устрицы с лимоном (1 шт)", ru: "Свежие устрицы с лимоном (1 шт)", en: "Fresh Oysters with Lemon (1 pc)" }, 
-                price: 350, 
-                image: "https://images.unsplash.com/photo-1583198088014-2c335a111b7d?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Мурдуктай жаңы устрицылар лимон ширеси менен.", ru: "Свежайшие устрицы с лимонным соком.", en: "Fresh oysters with lemon juice." } 
+                name: { kg: "Тайча креветкалар", ru: "Креветки по-тайски", en: "Thai Style Shrimps" }, 
+                price: 2000, 
+                image: "креветкипотайски.jpeg", 
+                desc: { kg: "Тай рецепти боюнча даярдалган сочный тигр креветкалары.", ru: "Сочные тигровые креветки по традиционному тайскому рецепту.", en: "Juicy tiger shrimps prepared according to traditional Thai recipe." } 
             },
             { 
                 id: 302, catId: 3, 
-                name: { kg: "Устрицы запеченные с пармезаном", ru: "Устрицы запеченные с пармезаном", en: "Oysters Baked with Parmesan" }, 
-                price: 420, 
-                image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Пармезан сыры менен духовкада кызарган устрицылар.", ru: "Устрицы, запеченные в духовке с сыром пармезан.", en: "Oysters baked in the oven with parmesan cheese." } 
+                name: { kg: "Сливочный соустагы креветки", ru: "Креветки в сливочном соусе", en: "Shrimps in Creamy Sauce" }, 
+                price: 2500, 
+                image: "креветкивслисоус.jpeg", 
+                desc: { kg: "Сливочно-чесночный соустагы креветкалар.", ru: "Нежные креветки в сливочно-чесночном соусе с легкими пряными нотками.", en: "Delicate shrimp in garlic cream sauce with mild spicy notes." } 
             },
             { 
                 id: 303, catId: 3, 
-                name: { kg: "Устрицы под сливочно-чесночным соусом", ru: "Устрицы под сливочно-чесночным соусом", en: "Oysters in Creamy Garlic Sauce" }, 
-                price: 400, 
-                image: "https://images.unsplash.com/photo-1583198088014-2c335a111b7d?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Каймак-сарымсак аралашмасындагы назик даам.", ru: "Нежный вкус в сливочно-чесночной смеси.", en: "Delicate taste in creamy garlic mixture." } 
+                name: { kg: "Мангаладагы сазан жана креветки", ru: "Сазан и креветки на мангале", en: "Grilled Carp and Shrimps" }, 
+                price: 2200, 
+                image: "сазанмангал.jpeg", 
+                desc: { kg: "Сливочный соустагы мангала бышкан сазан жана креветка.", ru: "Сочный сазан и тигровые креветки на мангале в сливочном соусе.", en: "Grilled carp and tiger shrimp in creamy sauce." } 
             },
             { 
                 id: 304, catId: 3, 
-                name: { kg: "Премиум устрицы «Фин де Клер»", ru: "Премиум устрицы «Фин де Клер»", en: "Fine de Claire Premium Oysters" }, 
-                price: 500, 
-                image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Француз стандартындагы эң тандамал устрица.", ru: "Отборная устрица французского стандарта.", en: "Select French standard oysters." } 
+                name: { kg: "Бууланган балык жана креветки", ru: "Рыба и креветки на пару", en: "Steamed Fish and Shrimps" }, 
+                price: 2180, 
+                image: "ркп.jpeg", 
+                desc: { kg: "Амур балыгы жана креветкалар бууда даярдалган.", ru: "Нежная рыба амур и сочные креветки на пару со специями.", en: "Tender amur fish and juicy shrimp steamed." } 
             },
             { 
                 id: 305, catId: 3, 
-                name: { kg: "Сет из 4 устриц с соусом Табаско", ru: "Сет из 4 устриц с соусом Табаско", en: "Set of 4 Oysters with Tabasco Sauce" }, 
-                price: 1500, 
-                image: "https://images.unsplash.com/photo-1583198088014-2c335a111b7d?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Табаско соусу кошулган 4 даана устрица топтому.", ru: "Набор из 4 штук устриц с добавлением соуса Табаско.", en: "Set of 4 oysters with added Tabasco sauce." } 
+                name: { kg: "Жареная форель", ru: "Жареная форель", en: "Fried Trout" }, 
+                price: 1600, 
+                image: "жф.jpeg", 
+                desc: { kg: "Алтын кабыкка чейин куурулган форель балыгы (1 кг).", ru: "Нежная форель, обжаренная до золотистой корочки. Подается с лимоном (1 кг).", en: "Tender trout fried to a golden crust served with lemon (1 kg)." } 
+            },
+            { 
+                id: 306, catId: 3, 
+                name: { kg: "Ачуу соустагы деңиз азыктары сотеси", ru: "Соте из морепродуктов в остром соусе", en: "Seafood Sauté in Spicy Sauce" }, 
+                price: 2000, 
+                image: "со.jpeg", 
+                desc: { kg: "Деңиз азыктары, жашылчалар жана тофу пикантный соуста.", ru: "Микс морепродуктов с овощами и тофу в пикантном фирменном соусе.", en: "Seafood mix with vegetables and tofu in spicy sauce." } 
+            },
+            { 
+                id: 307, catId: 3, 
+                name: { kg: "Сливочный соустагы деңиз азыктары сотеси", ru: "Соте из морепродуктов в сливочном соусе", en: "Seafood Sauté in Creamy Sauce" }, 
+                price: 2000, 
+                image: "сс.jpeg", 
+                desc: { kg: "Сливочный соустагы деңиз азыктары жана жашылчалар микси.", ru: "Микс морепродуктов с овощами, приготовленный в сливочном соусе.", en: "Seafood mix with vegetables cooked in creamy sauce." } 
             },
 
+            // Раки и Закуски (catId: 4)
             { 
                 id: 401, catId: 4, 
-                name: { kg: "Филадельфия Классик сет", ru: "Филадельфия Классик сет", en: "Philadelphia Classic Set" }, 
-                price: 1250, 
-                image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Кызыл балык, крем-сыр жана авокадо.", ru: "Красная рыба, крем-сыр и авокадо.", en: "Red fish, cream cheese and avocado." } 
+                name: { kg: "Запеченные мидии", ru: "Запечённые мидии", en: "Baked Mussels" }, 
+                price: 990, 
+                image: "м.jpeg", 
+                desc: { kg: "Творожный сыр жана снежный краб кошулган сливочный кремдеги мидиялар.", ru: "Нежные мидии, запеченные под сливочным кремом из творожного сыра и снежного краба.", en: "Baked mussels with cream cheese and crab." } 
             },
             { 
                 id: 402, catId: 4, 
-                name: { kg: "Дракон ролл с угрем", ru: "Дракон ролл с угрем", en: "Dragon Roll with Eel" }, 
-                price: 950, 
-                image: "https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Жылан балык жана унаги соусу.", ru: "Угорь и соус унаги.", en: "Eel and unagi sauce." } 
+                name: { kg: "Шеф рактары", ru: "Раки от шефа", en: "Chef's Crayfish" }, 
+                price: 3500, 
+                image: "рак.jpg", 
+                desc: { kg: "Классикалык рецепт боюнча даярдалган отварные раки (1 кг).", ru: "Сочные отварные раки по классическому рецепту с зеленью и лимоном (1 кг).", en: "Juicy boiled crayfish (1 kg)." } 
             },
             { 
                 id: 403, catId: 4, 
-                name: { kg: "Запеченный сет «Океан»", ru: "Запеченный сет «Океан»", en: "Baked Set «Ocean»" }, 
-                price: 1400, 
-                image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Ысык сырлуу соус менен капталган роллдор топтому.", ru: "Набор роллов, покрытых горячим сырным соусом.", en: "Set of rolls covered with hot cheese sauce." } 
-            },
-            { 
-                id: 404, catId: 4, 
-                name: { kg: "Калифорния с крабом", ru: "Калифорния с крабом", en: "California with Crab" }, 
-                price: 850, 
-                image: "https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Икра жана чыныгы краб эти менен.", ru: "С икрой и настоящим мясом краба.", en: "With caviar and real crab meat." } 
-            },
-            { 
-                id: 405, catId: 4, 
-                name: { kg: "Суши нигири с лососем (4 шт)", ru: "Суши нигири с лососем (4 шт)", en: "Salmon Nigiri Sushi (4 pcs)" }, 
-                price: 600, 
-                image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Күрүч жана жаңы лосось кесиндилери.", ru: "Рис и свежие ломтики лосося.", en: "Rice and fresh salmon slices." } 
+                name: { kg: "Мангаладагы креветкалар (1 шпашка)", ru: "Креветки на мангале (1 шпашка)", en: "Grilled Shrimps (1 skewer)" }, 
+                price: 790, 
+                image: "км.jpg", 
+                desc: { kg: "Мангалда бышкан тигр креветкалары.", ru: "Нежные тигровые креветки на мангале с ароматными специями.", en: "Tender tiger shrimp on the grill." } 
             },
 
+            // Гарнирлер (catId: 5)
             { 
                 id: 501, catId: 5, 
-                name: { kg: "Лобстер термодор с сыром", ru: "Лобстер термодор с сыром", en: "Lobster Thermidor with Cheese" }, 
-                price: 2800, 
-                image: "https://images.unsplash.com/photo-1553247673-80875eaeb707?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Термодор соусунда жана эриген сырда бышкан лобстер.", ru: "Лобстер, запеченный в соусе термодор и плавленном сыре.", en: "Lobster baked in thermidor sauce and melted cheese." } 
+                name: { kg: "Кайнатылган күрүч", ru: "Отварной рис", en: "Boiled Rice" }, 
+                price: 160, 
+                image: "рис.png", 
+                desc: { kg: "Ак отварной рис (150 гр).", ru: "Классический отварной рис (150 гр).", en: "Classic boiled rice (150 g)." } 
             },
             { 
                 id: 502, catId: 5, 
-                name: { kg: "Лобстер на гриле с чесночным маслом", ru: "Лобстер на гриле с чесночным маслом", en: "Grilled Lobster with Garlic Butter" }, 
-                price: 2600, 
-                image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Отко бышкан падышалык лобстер.", ru: "Королевский лобстер, приготовленный на огне.", en: "Royal lobster cooked over fire." } 
+                name: { kg: "Картофель фри", ru: "Картофель фри", en: "French Fries" }, 
+                price: 160, 
+                image: "фри.png", 
+                desc: { kg: "Кытырак картофель фри (150 гр).", ru: "Хрустящий картофель фри (150 гр).", en: "Crispy french fries (150 g)." } 
             },
             { 
                 id: 503, catId: 5, 
-                name: { kg: "Лобстер по-царски в сливочном соусе", ru: "Лобстер по-царски в сливочном соусе", en: "Tsarsky Lobster in Creamy Sauce" }, 
-                price: 2900, 
-                image: "https://images.unsplash.com/photo-1553247673-80875eaeb707?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Өзгөчө каймак майлуу рецепт менен даярдалган.", ru: "Приготовлено по особому сливочному рецепту.", en: "Prepared according to a special creamy recipe." } 
+                name: { kg: "Деревенский картофель", ru: "Картофель по-деревенски", en: "Country Potatoes" }, 
+                price: 180, 
+                image: "к.png", 
+                desc: { kg: "Чөптөр менен бышкан картошка (150 гр).", ru: "Картофель по-деревенски с ароматными травами (150 гр).", en: "Country style potatoes (150 g)." } 
             },
             { 
                 id: 504, catId: 5, 
-                name: { kg: "Хрустящие клешни лобстера", ru: "Хрустящие клешни лобстера", en: "Crispy Lobster Claws" }, 
-                price: 1800, 
-                image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Лобстердин тырмакчалары кытырак клярда.", ru: "Клешни лобстера в хрустящем кляре.", en: "Lobster claws in crispy batter." } 
-            },
-            { 
-                id: 505, catId: 5, 
-                name: { kg: "Большой сет с лобстером и морепродуктами", ru: "Большой сет с лобстером и морепродуктами", en: "Large Set with Lobster and Seafood" }, 
-                price: 4500, 
-                image: "https://images.unsplash.com/photo-1553247673-80875eaeb707?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Чоң компания үшін лобстер жана башка дениз азыктары.", ru: "Лобстер и другие морепродукты для большой компании.", en: "Lobster and other seafood for a large group." } 
+                name: { kg: "Пияз шакекчелери", ru: "Луковые кольца", en: "Onion Rings" }, 
+                price: 190, 
+                image: "л.png", 
+                desc: { kg: "Кытырак клярдагы пияз шакекчелери (150 гр).", ru: "Хрустящие луковые кольца в кляре (150 гр).", en: "Crispy onion rings (150 g)." } 
             },
 
+            // Соустар (catId: 6)
             { 
                 id: 601, catId: 6, 
-                name: { kg: "Лимонад «Морской бриз»", ru: "Лимонад «Морской бриз»", en: "Sea Breeze Lemonade" }, 
-                price: 250, 
-                image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Көк түстөгү сергиүүчү автордук лимонад.", ru: "Освежающий авторский лимонад голубого цвета.", en: "Refreshing signature blue lemonade." } 
+                name: { kg: "Сарымсак соусу", ru: "Чесночный соус", en: "Garlic Sauce" }, 
+                price: 80, 
+                image: "ч.png", 
+                desc: { kg: "Фирмалык сарымсак соусу.", ru: "Фирменный чесночный соус.", en: "Signature garlic sauce." } 
             },
             { 
                 id: 602, catId: 6, 
-                name: { kg: "Мохито классический", ru: "Мохито классический", en: "Classic Mojito" }, 
-                price: 280, 
-                image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Жалбыз, лайм жана муз кошулган суусундук.", ru: "Напиток с мятой, лаймом и льдом.", en: "Drink with mint, lime and ice." } 
+                name: { kg: "Сыр соусу", ru: "Сырный соус", en: "Cheese Sauce" }, 
+                price: 80, 
+                image: "с.png", 
+                desc: { kg: "Назик сыр соусу.", ru: "Нежный сырный соус.", en: "Delicate cheese sauce." } 
             },
             { 
                 id: 603, catId: 6, 
-                name: { kg: "Фреш апельсиновый", ru: "Фреш апельсиновый", en: "Orange Fresh" }, 
-                price: 300, 
-                image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Жаңы сыгылган апельсин ширеси.", ru: "Свежевыжатый апельсиновый сок.", en: "Freshly squeezed orange juice." } 
+                name: { kg: "Фирмалык соус", ru: "Фирменный соус", en: "Signature Sauce" }, 
+                price: 80, 
+                image: "т.png", 
+                desc: { kg: "Атайын фирмалык соус.", ru: "Специальный фирменный соус.", en: "Special signature sauce." } 
+            },
+
+            // Суусундуктар (catId: 7)
+            { 
+                id: 701, catId: 7, 
+                name: { kg: "Coca-Cola (1л)", ru: "Coca-Cola (1л)", en: "Coca-Cola (1L)" }, 
+                price: 120, 
+                image: "кола.jpg", 
+                desc: { kg: "Сергиүүчү суусундук Кока-Кола.", ru: "Освежающий напиток Кока-Кола.", en: "Refreshing Coca-Cola." } 
             },
             { 
-                id: 604, catId: 6, 
-                name: { kg: "Холодный чай с маракуйей", ru: "Холодный чай с маракуйей", en: "Passion Fruit Iced Tea" }, 
-                price: 220, 
-                image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Экзотикалык маракуйя даамы бар муздак чай.", ru: "Холодный чай с экзотическим вкусом маракуйи.", en: "Iced tea with exotic passion fruit flavor." } 
+                id: 702, catId: 7, 
+                name: { kg: "Fanta (1л)", ru: "Fanta (1л)", en: "Fanta (1L)" }, 
+                price: 120, 
+                image: "фанта.jpg", 
+                desc: { kg: "Апельсин даамындагы Фанта.", ru: "Газированный напиток Фанта.", en: "Fanta soft drink." } 
             },
             { 
-                id: 605, catId: 6, 
-                name: { kg: "Минеральная вода премиум (0.5л)", ru: "Минеральная вода премиум (0.5л)", en: "Premium Mineral Water (0.5L)" }, 
-                price: 150, 
-                image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=500&q=80", 
-                desc: { kg: "Таза тоо суусу.", ru: "Чистая горная вода.", en: "Clean mountain water." } 
+                id: 703, catId: 7, 
+                name: { kg: "Sprite (1л)", ru: "Sprite (1л)", en: "Sprite (1L)" }, 
+                price: 120, 
+                image: "спрайт.jpg", 
+                desc: { kg: "Лайм жана лимон даамындагы Спрайт.", ru: "Освежающий напиток Спрайт.", en: "Refreshing Sprite." } 
+            },
+            { 
+                id: 704, catId: 7, 
+                name: { kg: "Bonaqua суусу (0.5л)", ru: "Bonaqua (0.5л)", en: "Bonaqua Water (0.5L)" }, 
+                price: 50, 
+                image: "бау.jpg", 
+                desc: { kg: "Таза суу Бонаква.", ru: "Питьевая вода Бонаква.", en: "Bonaqua drinking water." } 
             }
         ];
 
@@ -855,7 +856,7 @@
         function renderProducts(itemsToRender) {
             const container = document.getElementById('productGrid');
             const currencyText = translations[currentLang].currency;
-            const btnText = translations[currentLang].addToCartBtn;
+            const priceLabelText = translations[currentLang].priceLabel;
 
             if (itemsToRender.length === 0) {
                 container.innerHTML = `<p class="col-span-full text-center text-gray-400 py-12">${currentLang === 'ru' ? 'Товары не найдены...' : currentLang === 'en' ? 'No products found...' : 'Товар табылган жок...'}</p>`;
@@ -867,38 +868,24 @@
                 const pName = typeof prod.name === 'object' ? prod.name[currentLang] : prod.name;
                 const pDesc = typeof prod.desc === 'object' ? prod.desc[currentLang] : prod.desc;
 
-                let priceHtml = `<span class="bg-cyan-400 text-oceanDark font-extrabold text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full shadow">${prod.price} ${currencyText}</span>`;
-                let discountBadge = '';
-
-                if (prod.oldPrice) {
-                    priceHtml = `
-                        <div class="flex items-center space-x-1.5 sm:space-x-2 bg-oceanDark/90 px-2.5 sm:px-3 py-1 rounded-full border border-cyan-500/40 shadow">
-                            <span class="text-gray-400 text-[10px] sm:text-xs line-through">${prod.oldPrice} ${currencyText}</span>
-                            <span class="text-cyan-400 font-extrabold text-[11px] sm:text-xs">${prod.price} ${currencyText}</span>
-                        </div>
-                    `;
-                    discountBadge = `<span class="absolute top-3 left-3 bg-red-500 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-full shadow-lg animate-pulse">-${prod.discount}</span>`;
-                }
-
                 html += `
                     <div class="glass-panel rounded-3xl overflow-hidden neon-box flex flex-col justify-between">
                         <div>
                             <div class="h-44 sm:h-48 overflow-hidden relative">
                                 <img src="${prod.image}" alt="${pName}" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                                ${discountBadge}
-                                <div class="absolute top-3 right-3">
-                                    ${priceHtml}
-                                </div>
                             </div>
                             <div class="p-4 sm:p-5">
                                 <h4 class="text-base sm:text-lg font-bold text-white mb-1">${pName}</h4>
                                 <p class="text-gray-300 text-xs line-clamp-2">${pDesc}</p>
                             </div>
                         </div>
-                        <div class="p-4 sm:p-5 pt-0">
-                            <button onclick="addToCart(${prod.id})" class="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-oceanDark font-bold py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm hover:opacity-90 transition flex items-center justify-center space-x-2">
-                                <i class="fa-solid fa-cart-plus"></i>
-                                <span>${btnText}</span>
+                        <div class="p-4 sm:p-5 pt-0 flex items-end justify-between">
+                            <div>
+                                <span class="text-gray-400 text-xs block font-medium">${priceLabelText}</span>
+                                <span class="text-cyan-400 font-extrabold text-base sm:text-lg neon-glow">${prod.price} ${currencyText}</span>
+                            </div>
+                            <button onclick="addToCart(${prod.id})" class="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-r from-cyan-400 to-blue-600 hover:opacity-90 text-oceanDark font-extrabold rounded-full flex items-center justify-center transition shadow-lg neon-box shrink-0">
+                                <i class="fa-solid fa-plus text-base sm:text-lg"></i>
                             </button>
                         </div>
                     </div>
@@ -938,21 +925,28 @@
 
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
-            const existing = cart.find(item => item.id === productId);
+            const cartItemId = `${productId}`;
+            const existing = cart.find(item => item.cartItemId === cartItemId);
+
             if (existing) {
                 existing.quantity += 1;
             } else {
-                cart.push({ ...product, quantity: 1 });
+                cart.push({
+                    ...product,
+                    cartItemId: cartItemId,
+                    price: product.price,
+                    quantity: 1
+                });
             }
             updateCartUI();
         }
 
-        function changeQuantity(productId, delta) {
-            const item = cart.find(i => i.id === productId);
+        function changeQuantity(cartItemId, delta) {
+            const item = cart.find(i => i.cartItemId === cartItemId);
             if (item) {
                 item.quantity += delta;
                 if (item.quantity <= 0) {
-                    cart = cart.filter(i => i.id !== productId);
+                    cart = cart.filter(i => i.cartItemId !== cartItemId);
                 }
             }
             updateCartUI();
@@ -988,9 +982,9 @@
                             </div>
                         </div>
                         <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
-                            <button onclick="changeQuantity(${item.id}, -1)" class="w-6 h-6 sm:w-7 sm:h-7 bg-cyan-500/20 text-cyan-300 rounded-lg flex items-center justify-center hover:bg-cyan-400 hover:text-oceanDark text-xs">-</button>
+                            <button onclick="changeQuantity('${item.cartItemId}', -1)" class="w-6 h-6 sm:w-7 sm:h-7 bg-cyan-500/20 text-cyan-300 rounded-lg flex items-center justify-center hover:bg-cyan-400 hover:text-oceanDark text-xs">-</button>
                             <span class="text-white text-xs sm:text-sm font-bold w-4 text-center">${item.quantity}</span>
-                            <button onclick="changeQuantity(${item.id}, 1)" class="w-6 h-6 sm:w-7 sm:h-7 bg-cyan-500/20 text-cyan-300 rounded-lg flex items-center justify-center hover:bg-cyan-400 hover:text-oceanDark text-xs">+</button>
+                            <button onclick="changeQuantity('${item.cartItemId}', 1)" class="w-6 h-6 sm:w-7 sm:h-7 bg-cyan-500/20 text-cyan-300 rounded-lg flex items-center justify-center hover:bg-cyan-400 hover:text-oceanDark text-xs">+</button>
                         </div>
                     </div>
                 `;
