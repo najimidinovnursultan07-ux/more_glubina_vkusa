@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,7 +10,8 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -35,7 +37,7 @@
             overflow-x: hidden;
             -webkit-text-size-adjust: 100%;
         }
-        
+
         .glass-panel {
             background: rgba(6, 20, 36, 0.85);
             backdrop-filter: blur(16px);
@@ -52,6 +54,7 @@
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
             transition: all 0.3s ease;
         }
+
         .neon-box:hover {
             box-shadow: 0 0 35px rgba(0, 242, 254, 0.5);
             transform: translateY(-2px);
@@ -66,7 +69,7 @@
             z-index: -1;
             background: radial-gradient(circle at 50% 50%, #0c2b4e 0%, #061424 50%, #010810 100%);
         }
-        
+
         .bubble {
             position: absolute;
             bottom: -50px;
@@ -77,10 +80,23 @@
         }
 
         @keyframes rise {
-            0% { transform: translateY(0) scale(1); opacity: 0; }
-            20% { opacity: 0.8; }
-            80% { opacity: 0.8; }
-            100% { transform: translateY(-110vh) scale(1.6); opacity: 0; }
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) scale(1.6);
+                opacity: 0;
+            }
         }
 
         .main-slideshow {
@@ -122,6 +138,7 @@
         }
     </style>
 </head>
+
 <body class="font-sans relative">
 
     <div class="water-bg" id="bubbleContainer"></div>
@@ -130,7 +147,8 @@
     <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-cyan-500/30">
         <div class="border-b border-cyan-500/20 bg-oceanBlue/60 py-1 px-3 sm:px-6 lg:px-8 text-[11px] sm:text-xs">
             <div class="max-w-7xl mx-auto flex justify-between items-center text-cyan-200">
-                <a href="tel:+996507578578" class="flex items-center space-x-1.5 hover:text-cyan-400 transition font-bold">
+                <a href="tel:+996507578578"
+                    class="flex items-center space-x-1.5 hover:text-cyan-400 transition font-bold">
                     <i class="fa-solid fa-phone text-cyan-400"></i>
                     <span>+996 507 578 578</span>
                 </a>
@@ -143,12 +161,16 @@
 
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-2 sm:space-x-3 group min-w-0">
-                <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white/10 flex items-center justify-center neon-box shrink-0 border border-cyan-400/50">
+                <div
+                    class="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white/10 flex items-center justify-center neon-box shrink-0 border border-cyan-400/50">
                     <img src="logo.png" alt="Море — Глубина вкуса Logo" class="w-full h-full object-cover">
                 </div>
                 <div class="min-w-0">
-                    <span class="text-[11px] sm:text-base font-extrabold tracking-tight sm:tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-cyan-400 uppercase block truncate neon-glow" data-i18n="brandTitle">МОРЕ — ГЛУБИНА ВКУСА</span>
-                    <span class="text-[8px] sm:text-xs text-cyan-400 tracking-widest font-bold block truncate" data-i18n="brandSubtitle">МОРЕ ПРОДУКТЫ</span>
+                    <span
+                        class="text-[11px] sm:text-base font-extrabold tracking-tight sm:tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-cyan-400 uppercase block truncate neon-glow"
+                        data-i18n="brandTitle">МОРЕ — ГЛУБИНА ВКУСА</span>
+                    <span class="text-[8px] sm:text-xs text-cyan-400 tracking-widest font-bold block truncate"
+                        data-i18n="brandSubtitle">МОРЕ ПРОДУКТЫ</span>
                 </div>
             </a>
 
@@ -159,7 +181,8 @@
                 <a href="#fun" class="hover:text-cyan-400 transition" data-i18n="navMood">Атмосфера</a>
                 <a href="#footer" class="hover:text-cyan-400 transition" data-i18n="navContact">Контакты</a>
 
-                <select id="langSelect" onchange="changeLanguage(this.value)" class="glass-panel text-cyan-300 px-2 py-1 rounded-lg text-xs font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
+                <select id="langSelect" onchange="changeLanguage(this.value)"
+                    class="glass-panel text-cyan-300 px-2 py-1 rounded-lg text-xs font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
                     <option value="kg" class="bg-oceanDark">KG</option>
                     <option value="ru" class="bg-oceanDark">RU</option>
                     <option value="en" class="bg-oceanDark">EN</option>
@@ -167,56 +190,74 @@
             </nav>
 
             <div class="flex items-center space-x-2 shrink-0">
-                <select id="langSelectMob" onchange="changeLanguage(this.value)" class="lg:hidden glass-panel text-cyan-300 px-1.5 py-1 rounded-lg text-[11px] font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
+                <select id="langSelectMob" onchange="changeLanguage(this.value)"
+                    class="lg:hidden glass-panel text-cyan-300 px-1.5 py-1 rounded-lg text-[11px] font-bold focus:outline-none border-cyan-500/50 cursor-pointer">
                     <option value="kg" class="bg-oceanDark">KG</option>
                     <option value="ru" class="bg-oceanDark">RU</option>
                     <option value="en" class="bg-oceanDark">EN</option>
                 </select>
 
-                <button onclick="toggleCart()" class="relative bg-gradient-to-r from-cyan-400 to-blue-600 text-oceanDark font-extrabold px-3 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center space-x-1 sm:space-x-2 neon-box text-xs sm:text-sm shrink-0">
+                <button onclick="toggleCart()"
+                    class="relative bg-gradient-to-r from-cyan-400 to-blue-600 text-oceanDark font-extrabold px-3 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center space-x-1 sm:space-x-2 neon-box text-xs sm:text-sm shrink-0">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="hidden xs:inline" data-i18n="cartBtn">Корзина</span>
-                    <span id="cartCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] sm:text-xs w-4 h-4 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-bold">0</span>
+                    <span id="cartCount"
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] sm:text-xs w-4 h-4 sm:w-6 sm:h-6 rounded-full flex items-center justify-center font-bold">0</span>
                 </button>
             </div>
         </div>
     </header>
 
     <!-- MAIN SECTION -->
-    <section id="main" class="relative pt-36 sm:pt-40 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center overflow-hidden">
-       <div class="main-slideshow">
+    <section id="main"
+        class="relative pt-36 sm:pt-40 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center overflow-hidden">
+        <div class="main-slideshow">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                <source src="https://www.image2url.com/r2/default/videos/1790355056218-c4dd403b-6f60-4dc9-ad4a-b34fe341f4f9.mp4" type="video/mp4">
+                <source
+                    src="https://www.image2url.com/r2/default/videos/1790355056218-c4dd403b-6f60-4dc9-ad4a-b34fe341f4f9.mp4"
+                    type="video/mp4">
             </video>
         </div>
         <div class="main-overlay"></div>
 
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+        <div
+            class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
             <div class="space-y-4 sm:space-y-6 text-center lg:text-left">
-                <div class="inline-flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-xs sm:text-sm font-medium">
+                <div
+                    class="inline-flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-xs sm:text-sm font-medium">
                     <i class="fa-solid fa-fish-fins"></i>
                     <span data-i18n="heroBadge">Самые свежие и вкусные премиум морепродукты</span>
                 </div>
                 <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                    <span data-i18n="heroTitle1">Из глубин моря</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400 neon-glow block sm:inline" data-i18n="heroTitle2">прямо к вам!</span>
+                    <span data-i18n="heroTitle1">Из глубин моря</span> <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400 neon-glow block sm:inline"
+                        data-i18n="heroTitle2">прямо к вам!</span>
                 </h1>
-                <p class="text-gray-200 text-sm sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0" data-i18n="heroDesc">
-                    Великолепные вкусы, живая рыба, креветки, устрицы и другие деликатесы в одном месте. Почувствуйте настоящий вкус в 3D пространстве.
+                <p class="text-gray-200 text-sm sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+                    data-i18n="heroDesc">
+                    Великолепные вкусы, живая рыба, креветки, устрицы и другие деликатесы в одном месте. Почувствуйте
+                    настоящий вкус в 3D пространстве.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
-                    <a href="#categories" class="bg-gradient-to-r from-cyan-400 to-blue-600 text-oceanDark font-bold px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-lg hover:opacity-90 transition neon-box text-center text-sm sm:text-base" data-i18n="heroBtnMenu">
+                    <a href="#categories"
+                        class="bg-gradient-to-r from-cyan-400 to-blue-600 text-oceanDark font-bold px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-lg hover:opacity-90 transition neon-box text-center text-sm sm:text-base"
+                        data-i18n="heroBtnMenu">
                         Смотреть меню
                     </a>
-                    <a href="https://wa.me/996507578578?text=Салам!+Колдоо+керек+эле" target="_blank" class="glass-panel text-cyan-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold hover:bg-cyan-500/20 transition border border-cyan-500/50 text-center text-sm sm:text-base">
+                    <a href="https://wa.me/996507578578?text=Салам!+Колдоо+керек+эле" target="_blank"
+                        class="glass-panel text-cyan-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold hover:bg-cyan-500/20 transition border border-cyan-500/50 text-center text-sm sm:text-base">
                         <i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="heroBtnWa">WhatsApp Вопрос</span>
                     </a>
                 </div>
             </div>
 
             <div class="relative rounded-3xl overflow-hidden glass-panel p-2 sm:p-3 neon-box border-cyan-400/40">
-                <div class="relative rounded-2xl overflow-hidden aspect-video bg-oceanBlue flex items-center justify-center">
+                <div
+                    class="relative rounded-2xl overflow-hidden aspect-video bg-oceanBlue flex items-center justify-center">
                     <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-                        <source src="https://www.image2url.com/r2/default/videos/1790355106295-369479f7-d0f7-413f-a810-ec60091c5076.mp4" type="video/mp4">
+                        <source
+                            src="https://www.image2url.com/r2/default/videos/1790355106295-369479f7-d0f7-413f-a810-ec60091c5076.mp4"
+                            type="video/mp4">
                         Сиздин браузер видеону колдобойт.
                     </video>
                 </div>
@@ -227,8 +268,10 @@
     <!-- CATEGORIES SECTION -->
     <section id="categories" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-white"><span data-i18n="catMainTitle1">Наши</span> <span class="text-cyan-400 neon-glow" data-i18n="catMainTitle2">Категории</span></h2>
-            <p class="text-gray-300 text-xs sm:text-base mt-2" data-i18n="catMainDesc">Выберите любимые морепродукты по категориям</p>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white"><span data-i18n="catMainTitle1">Наши</span> <span
+                    class="text-cyan-400 neon-glow" data-i18n="catMainTitle2">Категории</span></h2>
+            <p class="text-gray-300 text-xs sm:text-base mt-2" data-i18n="catMainDesc">Выберите любимые морепродукты по
+                категориям</p>
         </div>
 
         <div id="categoryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 sm:gap-4"></div>
@@ -238,11 +281,15 @@
     <section id="menu" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 sm:mb-10 gap-4">
             <div>
-                <h2 id="currentCategoryTitle" class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="allProducts">Все Товары</h2>
-                <p class="text-gray-300 text-xs sm:text-sm mt-1" data-i18n="menuSubDesc">Свежепойманные и приготовленные деликатесы</p>
+                <h2 id="currentCategoryTitle" class="text-2xl sm:text-3xl font-extrabold text-white"
+                    data-i18n="allProducts">Все Товары</h2>
+                <p class="text-gray-300 text-xs sm:text-sm mt-1" data-i18n="menuSubDesc">Свежепойманные и приготовленные
+                    деликатесы</p>
             </div>
             <div class="w-full md:w-72 relative">
-                <input type="text" id="searchInput" placeholder="Поиск товаров..." data-i18n-placeholder="searchPlaceholder" oninput="filterProducts()" class="w-full glass-panel px-4 py-2.5 rounded-full pl-10 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 text-xs sm:text-sm border-cyan-500/40">
+                <input type="text" id="searchInput" placeholder="Поиск товаров..."
+                    data-i18n-placeholder="searchPlaceholder" oninput="filterProducts()"
+                    class="w-full glass-panel px-4 py-2.5 rounded-full pl-10 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 text-xs sm:text-sm border-cyan-500/40">
                 <i class="fa-solid fa-search absolute left-4 top-3 text-cyan-400 text-xs sm:text-sm"></i>
             </div>
         </div>
@@ -259,17 +306,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
                 <div class="space-y-3 sm:space-y-4 text-center md:text-left">
                     <div class="text-4xl sm:text-5xl animate-bounce">🦐🍣✨</div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 neon-glow" data-i18n="moodTitle">Какое у вас сегодня настроение?</h3>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 neon-glow" data-i18n="moodTitle">Какое у
+                        вас сегодня настроение?</h3>
                     <blockquote class="text-cyan-300 text-base sm:text-lg italic" data-i18n="moodQuote">
-                        "Если вы не едите рыбу, значит, до вас еще не добрались волшебные соусы наших поваров!"
+                        "Если вы не едите морепродукты, значит, до вас еще не добрались волшебные рецепты наших
+                        поваров!"
                     </blockquote>
                     <p class="text-gray-300 text-xs sm:text-sm" data-i18n="moodDesc">
-                        В нашем кафе каждого гостя ждут отличное настроение и морская прохлада. Вкусная еда — залог хорошей жизни!
+                        В нашем кафе каждого гостя ждут отличное настроение и морская прохлада. Вкусная еда — залог
+                        хорошей жизни!
                     </p>
                 </div>
                 <div class="grid grid-cols-2 gap-3 sm:gap-4">
                     <div class="col-span-2 overflow-hidden rounded-2xl glass-panel p-1 neon-box">
-                        <video autoplay muted loop playsinline preload="metadata" class="w-full aspect-video object-cover rounded-xl">
+                        <video autoplay muted loop playsinline preload="metadata"
+                            class="w-full aspect-video object-cover rounded-xl">
                             <source src="atmasvera.mp4" type="video/mp4">
                             Сиздин браузер видеону колдобойт.
                         </video>
@@ -281,13 +332,16 @@
 
     <!-- FOOTER -->
     <footer id="footer" class="glass-panel border-t border-cyan-500/30 pt-12 sm:pt-16 pb-10 sm:pb-12 mt-16 sm:mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8 sm:mb-12">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8 sm:mb-12">
             <div class="space-y-3 sm:space-y-4">
                 <div class="flex items-center space-x-3">
-                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-white/10 flex items-center justify-center shrink-0 border border-cyan-400/50">
+                    <div
+                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-white/10 flex items-center justify-center shrink-0 border border-cyan-400/50">
                         <img src="logo.png" alt="Logo" class="w-full h-full object-cover">
                     </div>
-                    <span class="text-base sm:text-lg font-bold tracking-wider text-white uppercase truncate" data-i18n="footerBrand">Глубина Вкуса</span>
+                    <span class="text-base sm:text-lg font-bold tracking-wider text-white uppercase truncate"
+                        data-i18n="footerBrand">Глубина Вкуса</span>
                 </div>
                 <p class="text-gray-300 text-xs sm:text-sm" data-i18n="footerDesc">
                     Центр самых вкусных морепродуктов. Качество и сервис для нас на первом месте!
@@ -295,58 +349,81 @@
             </div>
 
             <div>
-                <h4 class="text-white font-bold mb-3 sm:mb-4 border-l-4 border-cyan-400 pl-3 text-sm sm:text-base" data-i18n="footerNavTitle">Навигация</h4>
+                <h4 class="text-white font-bold mb-3 sm:mb-4 border-l-4 border-cyan-400 pl-3 text-sm sm:text-base"
+                    data-i18n="footerNavTitle">Навигация</h4>
                 <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
                     <li><a href="#main" class="hover:text-cyan-400 transition" data-i18n="navMain">Главная</a></li>
-                    <li><a href="#categories" class="hover:text-cyan-400 transition" data-i18n="navCat">Категории</a></li>
+                    <li><a href="#categories" class="hover:text-cyan-400 transition" data-i18n="navCat">Категории</a>
+                    </li>
                     <li><a href="#menu" class="hover:text-cyan-400 transition" data-i18n="navMenu">Товары</a></li>
                     <li><a href="#fun" class="hover:text-cyan-400 transition" data-i18n="navMood">Атмосфера</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-white font-bold mb-3 sm:mb-4 border-l-4 border-cyan-400 pl-3 text-sm sm:text-base" data-i18n="footerLinksTitle">Ссылки и Поддержка</h4>
+                <h4 class="text-white font-bold mb-3 sm:mb-4 border-l-4 border-cyan-400 pl-3 text-sm sm:text-base"
+                    data-i18n="footerLinksTitle">Ссылки и Поддержка</h4>
                 <div class="flex space-x-3 sm:space-x-4 mb-4">
-                    <a href="https://t.me/" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://wa.me/996507578578" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/more_glubina_vkusa?vrfl=dnJlcWduemVtc3Ft" target="_blank" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/" target="_blank"
+                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i
+                            class="fa-brands fa-telegram"></i></a>
+                    <a href="https://wa.me/996507578578" target="_blank"
+                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/more_glubina_vkusa?vrfl=dnJlcWduemVtc3Ft" target="_blank"
+                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 hover:bg-cyan-400 hover:text-oceanDark transition"><i
+                            class="fa-brands fa-instagram"></i></a>
                 </div>
-                <a href="https://wa.me/996507578578?text=Салам!+Колдоо+керек" target="_blank" class="inline-flex items-center text-cyan-300 text-xs sm:text-sm font-semibold hover:underline">
+                <a href="https://wa.me/996507578578?text=Салам!+Колдоо+керек" target="_blank"
+                    class="inline-flex items-center text-cyan-300 text-xs sm:text-sm font-semibold hover:underline">
                     <i class="fa-solid fa-headset mr-2"></i> <span data-i18n="whatsappSupport">WhatsApp Поддержка</span>
                 </a>
             </div>
 
             <div>
-                <h4 class="text-white font-bold mb-3 sm:mb-4 border-l-4 border-cyan-400 pl-3 text-sm sm:text-base" data-i18n="footerAddressTitle">Адреса</h4>
+                <h4 class="text-white font-bold mb-3 sm:mb-4 border-l-4 border-cyan-400 pl-3 text-sm sm:text-base"
+                    data-i18n="footerAddressTitle">Адреса</h4>
                 <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
-                    <li><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> <span data-i18n="addressText">г. Бишкек, ул. Туголбай Ата, 32</span></li>
+                    <li><i class="fa-solid fa-location-dot text-cyan-400 mr-2"></i> <span data-i18n="addressText">г.
+                            Бишкек, ул. Туголбай Ата, 32</span></li>
                     <li><i class="fa-solid fa-phone text-cyan-400 mr-2"></i> +996 (507) 578-578</li>
-                    <li><i class="fa-solid fa-clock text-cyan-400 mr-2"></i> <span data-i18n="timeText">Ежедневно: 9:00 - 3:00</span></li>
+                    <li><i class="fa-solid fa-clock text-cyan-400 mr-2"></i> <span data-i18n="timeText">Ежедневно: 9:00
+                            - 3:00</span></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 text-center text-gray-400 text-[11px] sm:text-xs border-t border-cyan-500/20 pt-6" data-i18n="copyright">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-400 text-[11px] sm:text-xs border-t border-cyan-500/20 pt-6"
+            data-i18n="copyright">
             © 2026 Море — Глубина вкуса. Все права защищены.
         </div>
     </footer>
 
     <!-- CART SIDEBAR MODAL -->
     <div id="cartModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex justify-end">
-        <div class="w-full max-w-md bg-oceanBlue h-full p-4 sm:p-6 flex flex-col justify-between border-l border-cyan-500/40 shadow-2xl overflow-y-auto">
+        <div
+            class="w-full max-w-md bg-oceanBlue h-full p-4 sm:p-6 flex flex-col justify-between border-l border-cyan-500/40 shadow-2xl overflow-y-auto">
             <div>
                 <div class="flex items-center justify-between pb-3 sm:pb-4 border-b border-cyan-500/30">
                     <h3 class="text-lg sm:text-xl font-bold text-white flex items-center">
-                        <i class="fa-solid fa-cart-shopping text-cyan-400 mr-2"></i> <span data-i18n="cartModalTitle">Ваша Корзина</span>
+                        <i class="fa-solid fa-cart-shopping text-cyan-400 mr-2"></i> <span
+                            data-i18n="cartModalTitle">Ваша Корзина</span>
                     </h3>
-                    <button onclick="toggleCart()" class="text-gray-300 hover:text-white text-xl p-2"><i class="fa-solid fa-xmark"></i></button>
+                    <button onclick="toggleCart()" class="text-gray-300 hover:text-white text-xl p-2"><i
+                            class="fa-solid fa-xmark"></i></button>
                 </div>
 
                 <div class="py-3 sm:py-4 space-y-2 sm:space-y-3 border-b border-cyan-500/30">
-                    <h4 class="text-cyan-300 font-semibold text-xs uppercase tracking-wider" data-i18n="clientInfoTitle">Данные клиента:</h4>
-                    <input type="text" id="clientName" placeholder="Ваше имя" data-i18n-placeholder="namePlaceholder" class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40 placeholder-gray-400">
-                    <input type="tel" id="clientPhone" placeholder="Ваш номер телефона (+996...)" data-i18n-placeholder="phonePlaceholder" class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40 placeholder-gray-400">
+                    <h4 class="text-cyan-300 font-semibold text-xs uppercase tracking-wider"
+                        data-i18n="clientInfoTitle">Данные клиента:</h4>
+                    <input type="text" id="clientName" placeholder="Ваше имя" data-i18n-placeholder="namePlaceholder"
+                        class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40 placeholder-gray-400">
+                    <input type="tel" id="clientPhone" placeholder="Ваш номер телефона (+996...)"
+                        data-i18n-placeholder="phonePlaceholder"
+                        class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40 placeholder-gray-400">
                     <div id="addressWrapper">
-                        <input type="text" id="clientAddress" placeholder="Адрес доставки (улица, номер дома)" data-i18n-placeholder="addressPlaceholder" class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40 placeholder-gray-400">
+                        <input type="text" id="clientAddress" placeholder="Адрес доставки (улица, номер дома)"
+                            data-i18n-placeholder="addressPlaceholder"
+                            class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40 placeholder-gray-400">
                     </div>
                 </div>
 
@@ -357,16 +434,21 @@
 
             <div class="space-y-3 sm:space-y-4 pt-3 sm:pt-4 border-t border-cyan-500/30">
                 <div>
-                    <label class="text-[11px] sm:text-xs text-cyan-300 font-semibold uppercase block mb-1" data-i18n="deliveryTypeLabel">Способ получения:</label>
-                    <select id="deliveryType" onchange="updateDeliveryNote()" class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40">
-                        <option value="delivery" class="bg-oceanDark" data-i18n="optDelivery">Доставка (через Яндекс)</option>
+                    <label class="text-[11px] sm:text-xs text-cyan-300 font-semibold uppercase block mb-1"
+                        data-i18n="deliveryTypeLabel">Способ получения:</label>
+                    <select id="deliveryType" onchange="updateDeliveryNote()"
+                        class="w-full glass-panel px-3 py-2 rounded-lg text-white text-xs sm:text-sm focus:outline-none border border-cyan-500/40">
+                        <option value="delivery" class="bg-oceanDark" data-i18n="optDelivery">Доставка (через Яндекс)
+                        </option>
                         <option value="pickup" class="bg-oceanDark" data-i18n="optPickup">Самовывоз</option>
                     </select>
                 </div>
 
-                <div id="deliveryNoticeBox" class="p-2.5 sm:p-3 rounded-lg bg-cyan-950/60 border border-cyan-500/50 text-[11px] sm:text-xs text-cyan-200">
+                <div id="deliveryNoticeBox"
+                    class="p-2.5 sm:p-3 rounded-lg bg-cyan-950/60 border border-cyan-500/50 text-[11px] sm:text-xs text-cyan-200">
                     <i class="fa-solid fa-triangle-exclamation mr-1 text-accentGold"></i>
-                    <span data-i18n="noticeDelivery"><strong>Примечание:</strong> Доставка осуществляется через Яндекс. Доставка выполняется <u>только после оплаты</u> при переходе в WhatsApp.</span>
+                    <span data-i18n="noticeDelivery"><strong>Примечание:</strong> Доставка осуществляется через Яндекс.
+                        Доставка выполняется <u>только после оплаты</u> при переходе в WhatsApp.</span>
                 </div>
 
                 <div class="flex justify-between text-base sm:text-lg font-bold text-white">
@@ -374,7 +456,8 @@
                     <span id="cartTotalPrice" class="text-cyan-400">0 сом</span>
                 </div>
 
-                <button onclick="checkoutWhatsApp()" class="w-full bg-gradient-to-r from-emerald-400 to-green-600 text-oceanDark font-extrabold py-2.5 sm:py-3 rounded-xl shadow-lg hover:opacity-90 transition flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                <button onclick="checkoutWhatsApp()"
+                    class="w-full bg-gradient-to-r from-emerald-400 to-green-600 text-oceanDark font-extrabold py-2.5 sm:py-3 rounded-xl shadow-lg hover:opacity-90 transition flex items-center justify-center space-x-2 text-xs sm:text-sm">
                     <i class="fa-brands fa-whatsapp text-lg sm:text-xl"></i>
                     <span data-i18n="whatsappBtn">Заказать через WhatsApp</span>
                 </button>
@@ -592,7 +675,7 @@
         let currentBgSlide = 0;
         const bgSlides = document.querySelectorAll('.bg-slide');
         function nextBgSlide() {
-            if(bgSlides.length === 0) return;
+            if (bgSlides.length === 0) return;
             bgSlides[currentBgSlide].classList.remove('active');
             currentBgSlide = (currentBgSlide + 1) % bgSlides.length;
             bgSlides[currentBgSlide].classList.add('active');
@@ -611,220 +694,220 @@
 
         const products = [
             // Салаты (catId: 1)
-            { 
-                id: 101, catId: 1, 
-                name: { kg: "Деңиз водоросли салаты", ru: "Салат из морских водорослей", en: "Seaweed Salad" }, 
-                price: 420, 
-                image: "салатизводорос.jpeg", 
-                desc: { kg: "Кунжут майы, сарымсак жана лимон кошулган даамдуу водоросли.", ru: "Нежные морские водоросли в ароматной заправке из кунжутного масла, чеснока и лимона.", en: "Delicate seaweed in aromatic dressing." } 
+            {
+                id: 101, catId: 1,
+                name: { kg: "Деңиз водоросли салаты", ru: "Салат из морских водорослей", en: "Seaweed Salad" },
+                price: 420,
+                image: "салатизводорос.jpeg",
+                desc: { kg: "Кунжут майы, сарымсак жана лимон кошулган даамдуу водоросли.", ru: "Нежные морские водоросли в ароматной заправке из кунжутного масла, чеснока и лимона.", en: "Delicate seaweed in aromatic dressing." }
             },
-            { 
-                id: 102, catId: 1, 
-                name: { kg: "Деңиз азыктары салаты", ru: "Салат с морепродуктами", en: "Seafood Salad" }, 
-                price: 990, 
-                image: "салатизморе.jpeg", 
-                desc: { kg: "Мидия, кальмар, креветка жана секелектер пармезан сыры менен.", ru: "Сочетание мидий, кальмаров, креветок и осьминогов в фирменном соусе с сыром Пармезан.", en: "Mussels, squid, shrimp, octopus with parmesan." } 
+            {
+                id: 102, catId: 1,
+                name: { kg: "Деңиз азыктары салаты", ru: "Салат с морепродуктами", en: "Seafood Salad" },
+                price: 990,
+                image: "салатизморе.jpeg",
+                desc: { kg: "Мидия, кальмар, креветка жана секелектер пармезан сыры менен.", ru: "Сочетание мидий, кальмаров, креветок и осьминогов в фирменном соусе с сыром Пармезан.", en: "Mussels, squid, shrimp, octopus with parmesan." }
             },
-            { 
-                id: 103, catId: 1, 
-                name: { kg: "Кимчи салаты", ru: "Кимчи салат", en: "Kimchi Salad" }, 
-                price: 590, 
-                image: "кимчисалат.jpeg", 
-                desc: { kg: "Ачуу калемпир, кинза жана соя соусу кошулган кимчи.", ru: "Пикантный салат из кимчи с острым перцем, кинзой и соевым соусом.", en: "Spicy kimchi salad with pepper and cilantro." } 
+            {
+                id: 103, catId: 1,
+                name: { kg: "Кимчи салаты", ru: "Кимчи салат", en: "Kimchi Salad" },
+                price: 590,
+                image: "кимчисалат.jpeg",
+                desc: { kg: "Ачуу калемпир, кинза жана соя соусу кошулган кимчи.", ru: "Пикантный салат из кимчи с острым перцем, кинзой и соевым соусом.", en: "Spicy kimchi salad with pepper and cilantro." }
             },
 
             // Супы (catId: 2)
-            { 
-                id: 201, catId: 2, 
-                name: { kg: "Сыр кошулган рамен", ru: "Рамен с сыром", en: "Cheese Ramen" }, 
-                price: 440, 
-                image: "раменсыром.jpeg", 
-                desc: { kg: "Гауда жана Пармезан сырлары кошулган сливочный бульон.", ru: "Насыщенный сливочно-сырный бульон с сырами Гауда и Пармезан.", en: "Rich creamy cheese ramen." } 
+            {
+                id: 201, catId: 2,
+                name: { kg: "Сыр кошулган рамен", ru: "Рамен с сыром", en: "Cheese Ramen" },
+                price: 440,
+                image: "раменсыром.jpeg",
+                desc: { kg: "Гауда жана Пармезан сырлары кошулган сливочный бульон.", ru: "Насыщенный сливочно-сырный бульон с сырами Гауда и Пармезан.", en: "Rich creamy cheese ramen." }
             },
-            { 
-                id: 202, catId: 2, 
-                name: { kg: "Тоок эти кошулган рамен", ru: "Рамен с курицей", en: "Chicken Ramen" }, 
-                price: 420, 
-                image: "раменкурица.jpeg", 
-                desc: { kg: "Тоок филеси, жумуртка жана жашыл пияз кошулган рамен.", ru: "Ароматный рамен с нежным куриным филе, яйцом и зеленым луком.", en: "Fragrant ramen with chicken fillet and egg." } 
+            {
+                id: 202, catId: 2,
+                name: { kg: "Тоок эти кошулган рамен", ru: "Рамен с курицей", en: "Chicken Ramen" },
+                price: 420,
+                image: "раменкурица.jpeg",
+                desc: { kg: "Тоок филеси, жумуртка жана жашыл пияз кошулган рамен.", ru: "Ароматный рамен с нежным куриным филе, яйцом и зеленым луком.", en: "Fragrant ramen with chicken fillet and egg." }
             },
-            { 
-                id: 203, catId: 2, 
-                name: { kg: "Фирмалык деңиз азыктары рамени", ru: "Фирменный рамен с морепродуктами", en: "Signature Seafood Ramen" }, 
-                price: 860, 
-                image: "раменфир.jpeg", 
-                desc: { kg: "Деңиз азыктары жана чыгыш татымалдары кошулган сорпо.", ru: "Насыщенный бульон с морепродуктами и пряными восточными нотками.", en: "Rich broth with seafood and spices." } 
+            {
+                id: 203, catId: 2,
+                name: { kg: "Фирмалык деңиз азыктары рамени", ru: "Фирменный рамен с морепродуктами", en: "Signature Seafood Ramen" },
+                price: 860,
+                image: "раменфир.jpeg",
+                desc: { kg: "Деңиз азыктары жана чыгыш татымалдары кошулган сорпо.", ru: "Насыщенный бульон с морепродуктами и пряными восточными нотками.", en: "Rich broth with seafood and spices." }
             },
-            { 
-                id: 204, catId: 2, 
-                name: { kg: "Деңиз азыктары супу", ru: "Суп из морепродуктов", en: "Seafood Soup" }, 
-                price: 800, 
-                image: "супмореп.jpeg", 
-                desc: { kg: "Балык, креветка, секелек жана кальмар кошулган сорпо.", ru: "Бульон с рыбой, креветками, осьминогами и кальмарами.", en: "Broth with fish, shrimp, octopus, and squid." } 
+            {
+                id: 204, catId: 2,
+                name: { kg: "Деңиз азыктары супу", ru: "Суп из морепродуктов", en: "Seafood Soup" },
+                price: 800,
+                image: "супмореп.jpeg",
+                desc: { kg: "Балык, креветка, секелек жана кальмар кошулган сорпо.", ru: "Бульон с рыбой, креветками, осьминогами и кальмарами.", en: "Broth with fish, shrimp, octopus, and squid." }
             },
-            { 
-                id: 205, catId: 2, 
-                name: { kg: "Том Ям деңиз азыктары менен", ru: "Том Ям с морепродуктами", en: "Tom Yum with Seafood" }, 
-                price: 840, 
-                image: "томям.jpeg", 
-                desc: { kg: "Сливочно-кокосовый бульондогу ачуу тай супу.", ru: "Пряный тайский суп с морепродуктами в сливочно-кокосовом бульоне.", en: "Spicy Thai soup in creamy coconut broth." } 
+            {
+                id: 205, catId: 2,
+                name: { kg: "Том Ям деңиз азыктары менен", ru: "Том Ям с морепродуктами", en: "Tom Yum with Seafood" },
+                price: 840,
+                image: "томям.jpeg",
+                desc: { kg: "Сливочно-кокосовый бульондогу ачуу тай супу.", ru: "Пряный тайский суп с морепродуктами в сливочно-кокосовом бульоне.", en: "Spicy Thai soup in creamy coconut broth." }
             },
 
             // Горячее (catId: 3)
-            { 
-                id: 301, catId: 3, 
-                name: { kg: "Тайча креветкалар", ru: "Креветки по-тайски", en: "Thai Style Shrimps" }, 
-                price: 2000, 
-                image: "креветкипотайски.jpeg", 
-                desc: { kg: "Тай рецепти боюнча даярдалган сочный тигр креветкалары.", ru: "Сочные тигровые креветки по традиционному тайскому рецепту.", en: "Juicy tiger shrimps prepared according to traditional Thai recipe." } 
+            {
+                id: 301, catId: 3,
+                name: { kg: "Тайча креветкалар", ru: "Креветки по-тайски", en: "Thai Style Shrimps" },
+                price: 2000,
+                image: "креветкипотайски.jpeg",
+                desc: { kg: "Тай рецепти боюнча даярдалган сочный тигр креветкалары.", ru: "Сочные тигровые креветки по традиционному тайскому рецепту.", en: "Juicy tiger shrimps prepared according to traditional Thai recipe." }
             },
-            { 
-                id: 302, catId: 3, 
-                name: { kg: "Сливочный соустагы креветки", ru: "Креветки в сливочном соусе", en: "Shrimps in Creamy Sauce" }, 
-                price: 2500, 
-                image: "креветкивслисоус.jpeg", 
-                desc: { kg: "Сливочно-чесночный соустагы креветкалар.", ru: "Нежные креветки в сливочно-чесночном соусе с легкими пряными нотками.", en: "Delicate shrimp in garlic cream sauce with mild spicy notes." } 
+            {
+                id: 302, catId: 3,
+                name: { kg: "Сливочный соустагы креветки", ru: "Креветки в сливочном соусе", en: "Shrimps in Creamy Sauce" },
+                price: 2500,
+                image: "креветкивслисоус.jpeg",
+                desc: { kg: "Сливочно-чесночный соустагы креветкалар.", ru: "Нежные креветки в сливочно-чесночном соусе с легкими пряными нотками.", en: "Delicate shrimp in garlic cream sauce with mild spicy notes." }
             },
-            { 
-                id: 303, catId: 3, 
-                name: { kg: "Мангаладагы сазан жана креветки", ru: "Сазан и креветки на мангале", en: "Grilled Carp and Shrimps" }, 
-                price: 2200, 
-                image: "сазанмангал.jpeg", 
-                desc: { kg: "Сливочный соустагы мангала бышкан сазан жана креветка.", ru: "Сочный сазан и тигровые креветки на мангале в сливочном соусе.", en: "Grilled carp and tiger shrimp in creamy sauce." } 
+            {
+                id: 303, catId: 3,
+                name: { kg: "Мангаладагы сазан жана креветки", ru: "Сазан и креветки на мангале", en: "Grilled Carp and Shrimps" },
+                price: 2200,
+                image: "сазанмангал.jpeg",
+                desc: { kg: "Сливочный соустагы мангала бышкан сазан жана креветка.", ru: "Сочный сазан и тигровые креветки на мангале в сливочном соусе.", en: "Grilled carp and tiger shrimp in creamy sauce." }
             },
-            { 
-                id: 304, catId: 3, 
-                name: { kg: "Бууланган балык жана креветки", ru: "Рыба и креветки на пару", en: "Steamed Fish and Shrimps" }, 
-                price: 2180, 
-                image: "ркп.jpeg", 
-                desc: { kg: "Амур балыгы жана креветкалар бууда даярдалган.", ru: "Нежная рыба амур и сочные креветки на пару со специями.", en: "Tender amur fish and juicy shrimp steamed." } 
+            {
+                id: 304, catId: 3,
+                name: { kg: "Бууланган балык жана креветки", ru: "Рыба и креветки на пару", en: "Steamed Fish and Shrimps" },
+                price: 2180,
+                image: "ркп.jpeg",
+                desc: { kg: "Амур балыгы жана креветкалар бууда даярдалган.", ru: "Нежная рыба амур и сочные креветки на пару со специями.", en: "Tender amur fish and juicy shrimp steamed." }
             },
-            { 
-                id: 305, catId: 3, 
-                name: { kg: "Жареная форель", ru: "Жареная форель", en: "Fried Trout" }, 
-                price: 1600, 
-                image: "жф.jpeg", 
-                desc: { kg: "Алтын кабыкка чейин куурулган форель балыгы (1 кг).", ru: "Нежная форель, обжаренная до золотистой корочки. Подается с лимоном (1 кг).", en: "Tender trout fried to a golden crust served with lemon (1 kg)." } 
+            {
+                id: 305, catId: 3,
+                name: { kg: "Жареная форель", ru: "Жареная форель", en: "Fried Trout" },
+                price: 1600,
+                image: "жф.jpeg",
+                desc: { kg: "Алтын кабыкка чейин куурулган форель балыгы (1 кг).", ru: "Нежная форель, обжаренная до золотистой корочки. Подается с лимоном (1 кг).", en: "Tender trout fried to a golden crust served with lemon (1 kg)." }
             },
-            { 
-                id: 306, catId: 3, 
-                name: { kg: "Ачуу соустагы деңиз азыктары сотеси", ru: "Соте из морепродуктов в остром соусе", en: "Seafood Sauté in Spicy Sauce" }, 
-                price: 2000, 
-                image: "со.jpeg", 
-                desc: { kg: "Деңиз азыктары, жашылчалар жана тофу пикантный соуста.", ru: "Микс морепродуктов с овощами и тофу в пикантном фирменном соусе.", en: "Seafood mix with vegetables and tofu in spicy sauce." } 
+            {
+                id: 306, catId: 3,
+                name: { kg: "Ачуу соустагы деңиз азыктары сотеси", ru: "Соте из морепродуктов в остром соусе", en: "Seafood Sauté in Spicy Sauce" },
+                price: 2000,
+                image: "со.jpeg",
+                desc: { kg: "Деңиз азыктары, жашылчалар жана тофу пикантный соуста.", ru: "Микс морепродуктов с овощами и тофу в пикантном фирменном соусе.", en: "Seafood mix with vegetables and tofu in spicy sauce." }
             },
-            { 
-                id: 307, catId: 3, 
-                name: { kg: "Сливочный соустагы деңиз азыктары сотеси", ru: "Соте из морепродуктов в сливочном соусе", en: "Seafood Sauté in Creamy Sauce" }, 
-                price: 2000, 
-                image: "сс.jpeg", 
-                desc: { kg: "Сливочный соустагы деңиз азыктары жана жашылчалар микси.", ru: "Микс морепродуктов с овощами, приготовленный в сливочном соусе.", en: "Seafood mix with vegetables cooked in creamy sauce." } 
+            {
+                id: 307, catId: 3,
+                name: { kg: "Сливочный соустагы деңиз азыктары сотеси", ru: "Соте из морепродуктов в сливочном соусе", en: "Seafood Sauté in Creamy Sauce" },
+                price: 2000,
+                image: "сс.jpeg",
+                desc: { kg: "Сливочный соустагы деңиз азыктары жана жашылчалар микси.", ru: "Микс морепродуктов с овощами, приготовленный в сливочном соусе.", en: "Seafood mix with vegetables cooked in creamy sauce." }
             },
 
             // Раки и Закуски (catId: 4)
-            { 
-                id: 401, catId: 4, 
-                name: { kg: "Запеченные мидии", ru: "Запечённые мидии", en: "Baked Mussels" }, 
-                price: 990, 
-                image: "м.jpeg", 
-                desc: { kg: "Творожный сыр жана снежный краб кошулган сливочный кремдеги мидиялар.", ru: "Нежные мидии, запеченные под сливочным кремом из творожного сыра и снежного краба.", en: "Baked mussels with cream cheese and crab." } 
+            {
+                id: 401, catId: 4,
+                name: { kg: "Запеченные мидии", ru: "Запечённые мидии", en: "Baked Mussels" },
+                price: 990,
+                image: "м.jpeg",
+                desc: { kg: "Творожный сыр жана снежный краб кошулган сливочный кремдеги мидиялар.", ru: "Нежные мидии, запеченные под сливочным кремом из творожного сыра и снежного краба.", en: "Baked mussels with cream cheese and crab." }
             },
-            { 
-                id: 402, catId: 4, 
-                name: { kg: "Шеф рактары", ru: "Раки от шефа", en: "Chef's Crayfish" }, 
-                price: 3500, 
-                image: "рак.jpg", 
-                desc: { kg: "Классикалык рецепт боюнча даярдалган отварные раки (1 кг).", ru: "Сочные отварные раки по классическому рецепту с зеленью и лимоном (1 кг).", en: "Juicy boiled crayfish (1 kg)." } 
+            {
+                id: 402, catId: 4,
+                name: { kg: "Шеф рактары", ru: "Раки от шефа", en: "Chef's Crayfish" },
+                price: 3500,
+                image: "рак.jpg",
+                desc: { kg: "Классикалык рецепт боюнча даярдалган отварные раки (1 кг).", ru: "Сочные отварные раки по классическому рецепту с зеленью и лимоном (1 кг).", en: "Juicy boiled crayfish (1 kg)." }
             },
-            { 
-                id: 403, catId: 4, 
-                name: { kg: "Мангаладагы креветкалар (1 шпашка)", ru: "Креветки на мангале (1 шпашка)", en: "Grilled Shrimps (1 skewer)" }, 
-                price: 790, 
-                image: "км.jpg", 
-                desc: { kg: "Мангалда бышкан тигр креветкалары.", ru: "Нежные тигровые креветки на мангале с ароматными специями.", en: "Tender tiger shrimp on the grill." } 
+            {
+                id: 403, catId: 4,
+                name: { kg: "Мангаладагы креветкалар (1 шпашка)", ru: "Креветки на мангале (1 шпашка)", en: "Grilled Shrimps (1 skewer)" },
+                price: 790,
+                image: "км.jpg",
+                desc: { kg: "Мангалда бышкан тигр креветкалары.", ru: "Нежные тигровые креветки на мангале с ароматными специями.", en: "Tender tiger shrimp on the grill." }
             },
 
             // Гарнирлер (catId: 5)
-            { 
-                id: 501, catId: 5, 
-                name: { kg: "Кайнатылган күрүч", ru: "Отварной рис", en: "Boiled Rice" }, 
-                price: 160, 
-                image: "рис.png", 
-                desc: { kg: "Ак отварной рис (150 гр).", ru: "Классический отварной рис (150 гр).", en: "Classic boiled rice (150 g)." } 
+            {
+                id: 501, catId: 5,
+                name: { kg: "Кайнатылган күрүч", ru: "Отварной рис", en: "Boiled Rice" },
+                price: 160,
+                image: "рис.png",
+                desc: { kg: "Ак отварной рис (150 гр).", ru: "Классический отварной рис (150 гр).", en: "Classic boiled rice (150 g)." }
             },
-            { 
-                id: 502, catId: 5, 
-                name: { kg: "Картофель фри", ru: "Картофель фри", en: "French Fries" }, 
-                price: 160, 
-                image: "фри.png", 
-                desc: { kg: "Кытырак картофель фри (150 гр).", ru: "Хрустящий картофель фри (150 гр).", en: "Crispy french fries (150 g)." } 
+            {
+                id: 502, catId: 5,
+                name: { kg: "Картофель фри", ru: "Картофель фри", en: "French Fries" },
+                price: 160,
+                image: "фри.png",
+                desc: { kg: "Кытырак картофель фри (150 гр).", ru: "Хрустящий картофель фри (150 гр).", en: "Crispy french fries (150 g)." }
             },
-            { 
-                id: 503, catId: 5, 
-                name: { kg: "Деревенский картофель", ru: "Картофель по-деревенски", en: "Country Potatoes" }, 
-                price: 180, 
-                image: "к.png", 
-                desc: { kg: "Чөптөр менен бышкан картошка (150 гр).", ru: "Картофель по-деревенски с ароматными травами (150 гр).", en: "Country style potatoes (150 g)." } 
+            {
+                id: 503, catId: 5,
+                name: { kg: "Деревенский картофель", ru: "Картофель по-деревенски", en: "Country Potatoes" },
+                price: 180,
+                image: "к.png",
+                desc: { kg: "Чөптөр менен бышкан картошка (150 гр).", ru: "Картофель по-деревенски с ароматными травами (150 гр).", en: "Country style potatoes (150 g)." }
             },
-            { 
-                id: 504, catId: 5, 
-                name: { kg: "Пияз шакекчелери", ru: "Луковые кольца", en: "Onion Rings" }, 
-                price: 190, 
-                image: "л.png", 
-                desc: { kg: "Кытырак клярдагы пияз шакекчелери (150 гр).", ru: "Хрустящие луковые кольца в кляре (150 гр).", en: "Crispy onion rings (150 g)." } 
+            {
+                id: 504, catId: 5,
+                name: { kg: "Пияз шакекчелери", ru: "Луковые кольца", en: "Onion Rings" },
+                price: 190,
+                image: "л.png",
+                desc: { kg: "Кытырак клярдагы пияз шакекчелери (150 гр).", ru: "Хрустящие луковые кольца в кляре (150 гр).", en: "Crispy onion rings (150 g)." }
             },
 
             // Соустар (catId: 6)
-            { 
-                id: 601, catId: 6, 
-                name: { kg: "Сарымсак соусу", ru: "Чесночный соус", en: "Garlic Sauce" }, 
-                price: 80, 
-                image: "ч.png", 
-                desc: { kg: "Фирмалык сарымсак соусу.", ru: "Фирменный чесночный соус.", en: "Signature garlic sauce." } 
+            {
+                id: 601, catId: 6,
+                name: { kg: "Сарымсак соусу", ru: "Чесночный соус", en: "Garlic Sauce" },
+                price: 80,
+                image: "ч.png",
+                desc: { kg: "Фирмалык сарымсак соусу.", ru: "Фирменный чесночный соус.", en: "Signature garlic sauce." }
             },
-            { 
-                id: 602, catId: 6, 
-                name: { kg: "Сыр соусу", ru: "Сырный соус", en: "Cheese Sauce" }, 
-                price: 80, 
-                image: "с.png", 
-                desc: { kg: "Назик сыр соусу.", ru: "Нежный сырный соус.", en: "Delicate cheese sauce." } 
+            {
+                id: 602, catId: 6,
+                name: { kg: "Сыр соусу", ru: "Сырный соус", en: "Cheese Sauce" },
+                price: 80,
+                image: "с.png",
+                desc: { kg: "Назик сыр соусу.", ru: "Нежный сырный соус.", en: "Delicate cheese sauce." }
             },
-            { 
-                id: 603, catId: 6, 
-                name: { kg: "Фирмалык соус", ru: "Фирменный соус", en: "Signature Sauce" }, 
-                price: 80, 
-                image: "т.png", 
-                desc: { kg: "Атайын фирмалык соус.", ru: "Специальный фирменный соус.", en: "Special signature sauce." } 
+            {
+                id: 603, catId: 6,
+                name: { kg: "Фирмалык соус", ru: "Фирменный соус", en: "Signature Sauce" },
+                price: 80,
+                image: "т.png",
+                desc: { kg: "Атайын фирмалык соус.", ru: "Специальный фирменный соус.", en: "Special signature sauce." }
             },
 
             // Суусундуктар (catId: 7)
-            { 
-                id: 701, catId: 7, 
-                name: { kg: "Coca-Cola (1л)", ru: "Coca-Cola (1л)", en: "Coca-Cola (1L)" }, 
-                price: 120, 
-                image: "кола.jpg", 
-                desc: { kg: "Сергиүүчү суусундук Кока-Кола.", ru: "Освежающий напиток Кока-Кола.", en: "Refreshing Coca-Cola." } 
+            {
+                id: 701, catId: 7,
+                name: { kg: "Coca-Cola (1л)", ru: "Coca-Cola (1л)", en: "Coca-Cola (1L)" },
+                price: 120,
+                image: "кола.jpg",
+                desc: { kg: "Сергиүүчү суусундук Кока-Кола.", ru: "Освежающий напиток Кока-Кола.", en: "Refreshing Coca-Cola." }
             },
-            { 
-                id: 702, catId: 7, 
-                name: { kg: "Fanta (1л)", ru: "Fanta (1л)", en: "Fanta (1L)" }, 
-                price: 120, 
-                image: "фанта.jpg", 
-                desc: { kg: "Апельсин даамындагы Фанта.", ru: "Газированный напиток Фанта.", en: "Fanta soft drink." } 
+            {
+                id: 702, catId: 7,
+                name: { kg: "Fanta (1л)", ru: "Fanta (1л)", en: "Fanta (1L)" },
+                price: 120,
+                image: "фанта.jpg",
+                desc: { kg: "Апельсин даамындагы Фанта.", ru: "Газированный напиток Фанта.", en: "Fanta soft drink." }
             },
-            { 
-                id: 703, catId: 7, 
-                name: { kg: "Sprite (1л)", ru: "Sprite (1л)", en: "Sprite (1L)" }, 
-                price: 120, 
-                image: "спрайт.jpg", 
-                desc: { kg: "Лайм жана лимон даамындагы Спрайт.", ru: "Освежающий напиток Спрайт.", en: "Refreshing Sprite." } 
+            {
+                id: 703, catId: 7,
+                name: { kg: "Sprite (1л)", ru: "Sprite (1л)", en: "Sprite (1L)" },
+                price: 120,
+                image: "спрайт.jpg",
+                desc: { kg: "Лайм жана лимон даамындагы Спрайт.", ru: "Освежающий напиток Спрайт.", en: "Refreshing Sprite." }
             },
-            { 
-                id: 704, catId: 7, 
-                name: { kg: "Bonaqua суусу (0.5л)", ru: "Bonaqua (0.5л)", en: "Bonaqua Water (0.5L)" }, 
-                price: 50, 
-                image: "бау.jpg", 
-                desc: { kg: "Таза суу Бонаква.", ru: "Питьевая вода Бонаква.", en: "Bonaqua drinking water." } 
+            {
+                id: 704, catId: 7,
+                name: { kg: "Bonaqua суусу (0.5л)", ru: "Bonaqua (0.5л)", en: "Bonaqua Water (0.5L)" },
+                price: 50,
+                image: "бау.jpg",
+                desc: { kg: "Таза суу Бонаква.", ru: "Питьевая вода Бонаква.", en: "Bonaqua drinking water." }
             }
         ];
 
@@ -1036,13 +1119,13 @@
             let message = `🛒 *Заказ / Order*%0A%0A`;
             message += `👤 *Аты/Name:* ${name}%0A`;
             message += `📞 *Тел/Phone:* ${phone}%0A`;
-            
-            if(deliveryType === 'delivery') {
+
+            if (deliveryType === 'delivery') {
                 message += `📍 *Дарек/Address:* ${address}%0A`;
             }
-            
+
             message += `📍 *Түрү/Type:* ${deliveryTypeName}%0A%0A`;
-            
+
             cart.forEach((item, index) => {
                 const itemName = typeof item.name === 'object' ? item.name[currentLang] : item.name;
                 message += `${index + 1}. ${itemName} x ${item.quantity} — ${item.price * item.quantity} ${currencyText}%0A`;
@@ -1059,4 +1142,5 @@
         changeLanguage('ru');
     </script>
 </body>
+
 </html>
